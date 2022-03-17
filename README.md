@@ -1,6 +1,6 @@
 
 
-# Microsoft SharePoint Crawler; [![Build Status](In Progress)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+# Microsoft SharePoint Crawler;  [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
 > A Web crawler to find broken links in your SharePoint
 
 while working for a solution to validate if the links in Microsoft SharePoint 2016 are missing or broken, I came up with this idea to navigate and check if all the hyperlinks are correct and/or not broken (404). This solution works in the same direction to achieve this objective.
