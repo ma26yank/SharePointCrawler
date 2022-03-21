@@ -69,7 +69,7 @@ def SharePointCrawler(url, usr, pwd, out_path):
                     content = requests.get(
                         correct_url, auth=HttpNtlmAuth(usr, pwd))
 
-                    if content.status_code == 200:
+                    if content.status_code == 404 or content.status_code == 401:
                         brokenlinklist.append(
                             [correct_url, url[1], f"Status Code: {str(response_code)}"])
 
@@ -78,14 +78,14 @@ def SharePointCrawler(url, usr, pwd, out_path):
                     content = requests.get(
                         correct_url2, auth=HttpNtlmAuth(usr, pwd))
 
-                    if content.status_code == 200:
+                    if content.status_code == 404 or content.status_code == 401:
                         brokenlinklist.append(
                             [correct_url2, url[1], f"Status Code: {str(response_code)}"])
 
                 else:
                     content = requests.get(url[0], auth=HttpNtlmAuth(usr, pwd))
 
-                    if content.status_code == 200:
+                    if content.status_code == 404 or content.status_code == 401:
                         brokenlinklist.append(
                             [url[0], url[1], f"Status Code: {str(response_code)}"])
 
